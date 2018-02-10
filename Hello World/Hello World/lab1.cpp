@@ -2,6 +2,7 @@
 
 
 // Greatest Common Denominator
+//Shiv Randhawa 16/01/18
 // PRE: a is a positive integer
 // PRE: b is a positive integer
 // POST: a and b are unchanged
@@ -9,6 +10,26 @@
 int gcd(const int a, const int b)
 {
 	// Replace this line with your code (have fun!).
+	int big = a;
+	int small = b;
+	if (a <= b) {
+		big = b;
+		small = a;
+	}
+
+	if (big % small == 0) {
+		return small;
+	}
+	else {
+		for (int i = small - 1; i != 0; i--) {
+			if (big % i == 0 && small % i == 0) {
+				return i;
+			}
+		}
+	}
+
+
+
 	return 0;
 }
 
@@ -19,5 +40,17 @@ int gcd(const int a, const int b)
 long long fibonacci(const int n)
 {
 	// Replace this line with your code (challenge: do this with recursion!).
-	return 0;
+	long curfib = 1;
+	long prevfib = 1;
+	long temp = 0;
+
+	for (int i = 2; i <= n; i++) {
+		temp = curfib;
+		curfib = curfib + prevfib;
+		prevfib = temp;
+	}
+
+	return temp;
 }
+
+//test comment

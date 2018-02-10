@@ -1,3 +1,4 @@
+
 #include "../Hello World/lab1.h"
 #include "CppUnitTest.h"
 
@@ -36,7 +37,7 @@ namespace HelloUnitTests
 		TEST_METHOD(TestFibonacci2)
 		{
 			int result = fibonacci(4);
-			Assert::AreEqual(2, result);
+			Assert::AreEqual(3, result);
 		}
 	};
 }
